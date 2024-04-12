@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hanoi Towers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        header {
+            text-align: center;
+        }
+
+        .settings-card {
+            width: 70%;
+            margin: auto;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-d0f9491e.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
+</head>
+<body>
+<div class="container py-3">
+    <header>
+        <h1>Hanoi Tower puzzle</h1>
+    </header>
+    <main class="py-5">
+        <div class="card shadow settings-card">
+            <div class="card-header">
+                <h3>Settings</h3>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <span class="fw-bold px-2">Solver :</span>
+                        <span id="solver_value"></span>
+                    </div>
+                    <div class="col row">
+                        <select class="form-select col" id="solver" name="solver">
+                            <option value="normal">Classique</option>
+                            <option value="multipegs">Multipegs</option>
+                            <option value="bicolore">Bicolore</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <span class="fw-bold px-2">Disk count :</span>
+                            <span id="disk_count_value"></span>
+                        </div>
+                        <div class="col row">
+                            <div class="col-2 text-end text-muted"> min: <span id="min_disk_count"></span></div>
+                            <input type="range" class="form-range col" id="disk_count" name="disk_count">
+                            <div class="col-2 text-muted"> max: <span id="max_disk_count"></span></div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <span class="fw-bold px-2">Tower count :</span>
+                            <span id="tower_count_value"></span>
+                        </div>
+                        <div class="col row">
+                            <div class="col-2 text-end text-muted"> min: <span id="min_tower_count"></span></div>
+                            <input type="range" class="form-range col" id="tower_count" name="disk_count">
+                            <div class="col-2 text-muted"> max: <span id="max_tower_count"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success" id="btn_start">Start</button>
+                </div>
+            </div>
+    </main>
+</div>
+
+</body>
+</html>
